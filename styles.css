@@ -232,4 +232,18 @@ textarea {
       'left-pink'
       'contact';
   }
+
+  .ty-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .ty-content {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
 }
