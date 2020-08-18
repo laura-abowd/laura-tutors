@@ -42,26 +42,32 @@ h3 {
 }
 
 .vh {
-    font-size:3vh;
-    color:green;
+  font-size: 3vh;
+  color: green;
 }
+
 .vmin {
-    font-size:3vmin;
-    color:blue;
+  font-size: 3vmin;
+  color: blue;
 }
 
 .grid-container {
   display: grid;
+  grid-template-areas:
+    'hero hero hero'
+    'left-orange contact contact'
+    'left-pink contact contact';
   grid-template-columns: repeat(3, auto);
   grid-column-gap: 24px;
   grid-row-gap: 24px;
 }
 
 .hero-container {
-  grid-column: 1 / span 3;
+  /*grid-column: 1 / span 3;*/
+  grid-area: hero;
   background-color: var(--white);
   border-radius: 6px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.04), 0 6px 6px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 6px 6px rgba(0, 0, 0, 0.04);
 }
 
 .hero-container-content {
@@ -88,6 +94,7 @@ h3 {
 .avatar-image {
   margin-bottom: 20px;
 }
+
 .avatar {
   border-radius: 50%;
   width: 180px;
@@ -101,20 +108,20 @@ h3 {
 }
 
 .card-left {
-  grid-column: 1 /2;
+  /*grid-column: 1 /2;*/
+  grid-area: left-orange;
   background-color: var(--white);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.04), 0 6px 6px rgba(0,0,0,0.04);
-    border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 6px 6px rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
 }
 
 
-
 .card-left-pink {
-  grid-column: 1 /2;
+
+  grid-area: left-pink;
   background-color: var(--white);
   border-radius: 6px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.04), 0 6px 6px rgba(0,0,0,0.04);
-  margin-top: 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 6px 6px rgba(0, 0, 0, 0.04);
 }
 
 .flex-content {
@@ -123,12 +130,13 @@ h3 {
 }
 
 .card-right {
-  grid-column: 2 / span 2;
-  grid-row: 2 / span 2;
+
+  grid-area: contact;
+  /*grid-row: 2 / span 2;*/
   background-color: var(--white);
   min-height: 400px;
   border-radius: 6px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.04), 0 6px 6px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 6px 6px rgba(0, 0, 0, 0.04);
 
 }
 
@@ -216,13 +224,12 @@ textarea {
 
 @media only screen and (max-width: 1024px) {
   .grid-container {
-    display: flex;
-    flex-direction: column;
-
-  }
-
-.vw {
-    /*font-size: 4vw;*/
-
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'hero'
+      'left-orange'
+      'left-pink'
+      'contact';
   }
 }
