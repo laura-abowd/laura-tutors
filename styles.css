@@ -7,6 +7,7 @@
   --pink: #F1A6DB;
   --blue: #408DDE;
   --gray: #D6D5D5;
+  --blue-background: #B3D7FF;
   --montserrat: 'Montserrat', sans-serif;
 }
 
@@ -18,7 +19,7 @@
 html,
 body {
   font-family: var(--montserrat);
-  background-color: var(--gray);
+  background-color: var(--blue-background);
   width: 100%;
   font-size: 16px;
   /*1em == 16px*/
